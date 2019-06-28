@@ -100,7 +100,7 @@ class Bottleneck(nn.Module):
 
 class ResNet(nn.Module):
 
-    def __init__(self, block, layers, sample_size, sample_duration, shortcut_type='B', num_classes=400, last_fc=True):
+    def __init__(self, block, layers, sample_size, sample_duration, shortcut_type='B', num_classes=2, last_fc=True):
         self.last_fc = last_fc
 
         self.inplanes = 64

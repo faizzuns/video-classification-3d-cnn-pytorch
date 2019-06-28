@@ -17,7 +17,7 @@ if __name__=="__main__":
     opt.arch = '{}-{}'.format(opt.model_name, opt.model_depth)
     opt.sample_size = 112
     opt.sample_duration = 16
-    opt.n_classes = 400
+    opt.n_classes = 2
 
     model = generate_model(opt)
     print('loading model {}'.format(opt.model))
