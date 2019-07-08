@@ -135,6 +135,7 @@ class ResNeXt(nn.Module):
         if self.last_fc:
             x = self.fc(x)
 
+        x = F.softmax(x)
         return x
 
 def get_fine_tuning_parameters(model, ft_begin_index):

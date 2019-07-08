@@ -27,8 +27,6 @@ def classify_video(video_dir, video_name, class_names, model, opt):
 
         video_outputs.append(outputs.cpu().data)
         video_segments.append(segments)
-        print("Softmax")
-        print(outputs.Softmax().cpu())
 
     video_outputs = torch.cat(video_outputs)
     video_segments = torch.cat(video_segments)
