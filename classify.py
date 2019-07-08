@@ -44,6 +44,7 @@ def classify_video(video_dir, video_name, class_names, model, opt):
         if opt.mode == 'score':
             clip_results['label'] = class_names[max_indices[i]]
             clip_results['scores'] = video_outputs[i].tolist()
+            clip_results['max_indices'] = max_indices[i]
         elif opt.mode == 'feature':
             clip_results['features'] = video_outputs[i].tolist()
 
